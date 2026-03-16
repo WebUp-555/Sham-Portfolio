@@ -2,7 +2,7 @@
 
 const stats = [
   { value: "150+", label: "Hackathons" },
-  { value: "6X", label: "Wins" },
+  { value: "10X", label: "Wins" },
   { value: "IITM", label: "Education" },
 ];
 

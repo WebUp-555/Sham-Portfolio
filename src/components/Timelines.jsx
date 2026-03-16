@@ -2,6 +2,17 @@ import { motion } from "framer-motion";
 
 const experience = [
   {
+    title: "Intern — Presidio",
+    detail:
+      "Working as an intern at Presidio, contributing to real-world projects and gaining hands-on industry experience.",
+    highlights: [
+      "Real-world project contributions",
+      "Industry collaboration",
+    ],
+    time: "Mar 2026 – Present",
+    location: "Remote",
+  },
+  {
     title: "AI Engineer — ZUDU.AI",
     detail:
       "Fine-tuned a Tanglish-focused Large Language Model using Unsloth, optimizing multilingual understanding and inference efficiency. Benchmarked and evaluated Mistral, Gemma, and Qwen models on GCP VMs to identify the best-performing architecture for real-world deployment.",
@@ -28,7 +39,7 @@ const experience = [
     location: "Remote",
   },
   {
-    title: "150+ Hackathons — 6× Winner",
+    title: "150+ Hackathons — 10× Winner",
     detail:
       "Actively participated in 150+ hackathons, securing 6 wins and earning ₹6,08,000+ through innovative, high-impact solutions. Achieved top positions in two international and two national-level competitions, collaborating across diverse, fast-paced teams.",
     highlights: [

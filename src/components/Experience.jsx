@@ -2,6 +2,13 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    role: "Intern — Presidio",
+    detail:
+      "Working as an intern at Presidio, contributing to real-world projects and gaining hands-on industry experience.",
+    time: "Mar 2026 – Present",
+    location: "Remote",
+  },
+  {
     role: "AI Engineer — ZUDU.AI",
     detail:
       "Tanglish LLM fine-tuning with Unsloth, Mistral, Gemma, Qwen on GCP.",
@@ -16,7 +23,7 @@ const experiences = [
     location: "Remote",
   },
   {
-    role: "150+ Hackathons — 6x Winner",
+    role: "150+ Hackathons — 10x Winner",
     detail:
       "Participated in 70+ hackathons; won INR 6,08,000 across two international and two national competitions.",
     time: "Jan 2023 – Present",

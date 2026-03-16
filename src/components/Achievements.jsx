@@ -101,6 +101,62 @@ const achievements = [
         className: "md:col-span-1",
         gradient: "from-blue-400/20 to-indigo-600/5",
         textColor: "text-indigo-400"
+    },
+    {
+        id: 9,
+        title: "Chatbot War – Winner",
+        role: "Winner",
+        date: "27 Feb 2026",
+        description: "Won the Chatbot War competition by building a superior conversational AI that outperformed all rival bots in accuracy and engagement.",
+        milestones: ["AI Engineering", "Conversational Design"],
+        prize: "Winner 🏆",
+        icon: Trophy,
+        images: ["/achievements/akshaya1.png", "/achievements/akshaya2.png"],
+        className: "md:col-span-1",
+        gradient: "from-yellow-500/20 to-amber-600/5",
+        textColor: "text-yellow-400"
+    },
+    {
+        id: 10,
+        title: "Create Your Own AI Character – Runner Up",
+        role: "Runner-Up",
+        date: "27 Feb 2026",
+        description: "Secured Runner-Up position in the 'Create Your Own AI Character' challenge, showcasing creative AI character design and personality engineering.",
+        milestones: ["AI Character Design", "Prompt Engineering"],
+        prize: "Runner-Up",
+        icon: Star,
+        images: ["/achievements/akshaya1.png", "/achievements/akshaya2.png"],
+        className: "md:col-span-1",
+        gradient: "from-fuchsia-500/20 to-pink-600/5",
+        textColor: "text-fuchsia-400"
+    },
+    {
+        id: 11,
+        title: "Startup Ideathon – Runner Up",
+        role: "Runner-Up",
+        date: "27 Feb 2026",
+        description: "Achieved Runner-Up at the Startup Ideathon, presenting a compelling and innovative startup idea with strong market potential and execution strategy.",
+        milestones: ["Startup Pitch", "Market Research"],
+        prize: "Runner-Up",
+        icon: Zap,
+        images: ["/achievements/akshaya1.png", "/achievements/akshaya2.png"],
+        className: "md:col-span-1",
+        gradient: "from-sky-500/20 to-blue-600/5",
+        textColor: "text-sky-400"
+    },
+    {
+        id: 12,
+        title: "Samurai Hackathon – 1st Prize",
+        role: "Winner",
+        date: "15 Oct 2025",
+        description: "Won First Prize at the Samurai Hackathon, delivering an outstanding solution that outshone all competing teams.",
+        milestones: ["Problem Solving", "Innovation"],
+        prize: "₹10,000",
+        icon: Trophy,
+        images: ["/achievements/samurai.jpeg"],
+        className: "md:col-span-1",
+        gradient: "from-red-500/20 to-orange-600/5",
+        textColor: "text-red-400"
     }
 ];
 
