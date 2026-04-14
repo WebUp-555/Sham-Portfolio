@@ -1,4 +1,4 @@
-﻿import { useRef } from "react";
+﻿import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const stats = [
@@ -9,6 +9,7 @@ const stats = [
 
 export default function Hero() {
   const sectionRef = useRef(null);
+  const [showHeroImage, setShowHeroImage] = useState(true);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
@@ -16,129 +17,103 @@ export default function Hero() {
 
   const titleY = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.2]);
-  const illustrationY = useTransform(scrollYProgress, [0, 1], [0, 160]);
-  const illustrationScale = useTransform(scrollYProgress, [0, 1], [1, 0.92]);
-  const overlayY = useTransform(scrollYProgress, [0, 1], [0, -60]);
-  const overlayOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0.25]);
+  const illustrationY = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const illustrationScale = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
+  const overlayY = useTransform(scrollYProgress, [0, 1], [0, -40]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0.35]);
 
   return (
-    <section ref={sectionRef} className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-[#050505]" id="home">
+    <section ref={sectionRef} className="relative min-h-screen w-full overflow-hidden bg-black" id="home">
 
-      {/* Background Text Layer */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.05),transparent_28%),radial-gradient(circle_at_50%_80%,rgba(198,255,0,0.06),transparent_34%)]" />
+
       {/* Background Text Layer */}
       <motion.div
         style={{ y: titleY, opacity: titleOpacity }}
-        className="absolute inset-0 flex flex-col items-center justify-start lg:justify-center z-0 pointer-events-none select-none leading-none pt-40 lg:pt-0"
+        className="absolute inset-0 z-0 pointer-events-none select-none leading-none flex items-center justify-center translate-y-6 lg:translate-y-0"
       >
-        <motion.h1
-          className="text-[20vw] lg:text-[13.5vw] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white/80 to-white/10 text-center tracking-tight"
-          style={{ lineHeight: 0.85 }}
-        >
-          D
-        </motion.h1>
-        <motion.h1
-          className="text-[16vw] lg:text-[11.5vw] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white/80 to-white/10 text-center tracking-tight"
-          style={{ lineHeight: 0.85 }}
-        >
-          SHAMSHEER
-        </motion.h1>
+        <div className="text-center leading-[0.8]">
+          <motion.h1
+            className="text-[18vw] lg:text-[11.5vw] font-black uppercase text-transparent bg-clip-text bg-gradient-to-b from-white/85 to-white/5 tracking-tight"
+            style={{ lineHeight: 0.8 }}
+          >
+            D
+            <br />
+            SHAMSHEER
+          </motion.h1>
+        </div>
       </motion.div>
 
-      {/* Foreground Anime Placeholder Layer */}
-      <motion.div
-        style={{ y: illustrationY, scale: illustrationScale }}
-        className="absolute bottom-0 z-10 flex justify-center items-end h-[95vh] w-full pointer-events-none"
-      >
-        <motion.div
-          className="relative h-[72vh] w-[54vw] max-w-[560px] min-w-[280px]"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-        >
-          <div className="absolute inset-x-0 bottom-0 h-[58vh] rounded-[48px] border border-[#c6ff00]/20 bg-[radial-gradient(circle_at_50%_15%,rgba(198,255,0,0.16),transparent_34%),linear-gradient(180deg,rgba(19,19,19,0.92),rgba(6,6,6,0.98))] shadow-[0_0_60px_rgba(198,255,0,0.14)]" />
-          <div className="absolute bottom-[12vh] left-1/2 h-[40vh] w-[22vw] min-w-[170px] max-w-[260px] -translate-x-1/2 rounded-[120px] bg-gradient-to-b from-[#e7ffe0] via-[#c7ff79] to-[#1a1f12] shadow-[0_0_45px_rgba(198,255,0,0.22)]" />
-          <div className="absolute bottom-[31vh] left-1/2 h-[18vh] w-[15vh] -translate-x-1/2 rounded-[50%] bg-[#f4d7be] shadow-[0_0_25px_rgba(0,0,0,0.18)]" />
-          <div className="absolute bottom-[38vh] left-[50%] h-7 w-20 -translate-x-1/2 rounded-full bg-[#1a1a1a] shadow-[0_4px_0_rgba(0,0,0,0.18)]" />
-          <div className="absolute bottom-[41vh] left-[50%] h-3 w-3 -translate-x-[120%] rounded-full bg-[#111111]" />
-          <div className="absolute bottom-[41vh] left-[50%] h-3 w-3 translate-x-[20%] rounded-full bg-[#111111]" />
-          <div className="absolute bottom-[45vh] left-[50%] h-12 w-[12vh] -translate-x-1/2 rounded-t-[110px] bg-[#161616]" />
-          <div className="absolute bottom-[29vh] left-[50%] h-[20vh] w-[24vh] -translate-x-1/2 rounded-[80px] bg-gradient-to-b from-[#293040] via-[#11141d] to-[#0c0c0c] border border-white/10" />
-          <div className="absolute bottom-[25vh] left-[50%] h-[6vh] w-[18vh] -translate-x-1/2 rounded-full border border-[#c6ff00]/25 bg-[#0f0f0f] shadow-[0_0_24px_rgba(198,255,0,0.12)]" />
-          <div className="absolute bottom-[22vh] left-[50%] h-[13vh] w-5 -translate-x-[250%] rotate-[18deg] rounded-full bg-[#f4d7be]" />
-          <div className="absolute bottom-[22vh] left-[50%] h-[13vh] w-5 translate-x-[170%] -rotate-[18deg] rounded-full bg-[#f4d7be]" />
-          <div className="absolute bottom-[19vh] left-[50%] h-6 w-24 -translate-x-[160%] rotate-[14deg] rounded-full bg-[#d9ff6e]/30 blur-lg" />
-          <div className="absolute bottom-[19vh] left-[50%] h-6 w-24 translate-x-[70%] -rotate-[14deg] rounded-full bg-[#d9ff6e]/30 blur-lg" />
-          <div className="absolute bottom-[7vh] left-[12%] h-36 w-36 rounded-full bg-[#c6ff00]/10 blur-[80px]" />
-          <div className="absolute bottom-[8vh] right-[10%] h-44 w-44 rounded-full bg-[#c6ff00]/10 blur-[90px]" />
+      <div className="relative z-20 mx-auto flex min-h-screen max-w-7xl flex-col justify-between px-6 pb-8 pt-28 lg:pt-8">
+        <div className="grid flex-1 grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_minmax(320px,540px)_1fr] lg:items-center">
           <motion.div
-            className="absolute bottom-[13vh] left-[18%] h-12 w-24 rounded-2xl border border-[#c6ff00]/25 bg-[#111]/80 shadow-[0_0_24px_rgba(198,255,0,0.18)]"
-            animate={{ y: [0, -8, 0], rotate: [-3, 3, -3] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-[16vh] right-[18%] h-12 w-24 rounded-2xl border border-[#c6ff00]/25 bg-[#111]/80 shadow-[0_0_24px_rgba(198,255,0,0.18)]"
-            animate={{ y: [0, -10, 0], rotate: [4, -4, 4] }}
-            transition={{ duration: 4.3, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-[16vh] left-[12%] h-40 w-16 rounded-full bg-[#c6ff00]/20 blur-2xl"
-            animate={{ x: [0, 10, 0], opacity: [0.25, 0.45, 0.25] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bottom-[18vh] right-[12%] h-40 w-16 rounded-full bg-[#c6ff00]/20 blur-2xl"
-            animate={{ x: [0, -10, 0], opacity: [0.2, 0.4, 0.2] }}
-            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </motion.div>
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none"></div>
-      </motion.div>
-
-      {/* Overlay Content (Interactive) */}
-      <motion.div
-        style={{ y: overlayY, opacity: overlayOpacity }}
-        className="absolute inset-0 z-20 container mx-auto px-6 py-8 flex flex-col justify-between pointer-events-none"
-      >
-        {/* Top Row */}
-        <div className="flex justify-between items-start pointer-events-auto mt-2">
-          <div className="text-left max-w-[calc(100%-80px)]">
-            <div className="text-[#c6ff00] text-xs font-bold uppercase tracking-[0.2em] mb-1">
-              Backend Developer (Node.js)
+            style={{ y: overlayY, opacity: overlayOpacity }}
+            className="pointer-events-none max-w-sm self-start text-left"
+          >
+            <div className="text-[#c6ff00] text-xs font-semibold uppercase tracking-[0.3em] mb-2">
+              Upcoming Associate Engineer @ Presidio
             </div>
-            <div className="text-white text-sm font-light tracking-wide opacity-80">
+            <div className="text-white/70 text-sm font-light tracking-wide">
               Kurnool, Andhra Pradesh, India
             </div>
-          </div>
-        </div>
+          </motion.div>
 
-        {/* Bottom Row */}
-        <div className="flex justify-between items-end pointer-events-auto mb-4">
-          {/* Bottom Left: Bio/Intro */}
-          <div className="hidden lg:block max-w-xs text-left">
-            <p className="text-white/60 text-xs leading-relaxed font-light">
-              Building scalable REST APIs, authentication systems, and modular backend workflows.
-              Add your photo later without changing the overall layout.
-            </p>
-          </div>
+          <motion.div
+            style={{ y: illustrationY, scale: illustrationScale }}
+            className="relative mx-auto flex w-full max-w-[620px] justify-center self-end pointer-events-none lg:self-center"
+          >
+            <motion.div
+              className="relative h-[78vh] min-h-[680px] w-full max-w-[680px] -translate-y-6 lg:-translate-y-10"
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+            >
+              <div className="absolute inset-x-4 bottom-0 h-[26vh] rounded-full bg-black/85 blur-3xl" />
 
-          {/* Bottom Right: Stats */}
-          <div className="text-left lg:text-right flex flex-col gap-6 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] items-start lg:items-end">
-            {stats.slice(0, 3).map((stat) => (
+              {showHeroImage ? (
+                <img
+                  src="/spidey.png"
+                  alt="Spider-Man illustration"
+                  className="absolute bottom-0 left-1/2 h-[82vh] w-auto max-h-[82vh] -translate-x-1/2 object-contain drop-shadow-[0_36px_60px_rgba(0,0,0,0.7)]"
+                  onError={() => setShowHeroImage(false)}
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-end justify-center">
+                  <div className="h-[72vh] w-[30vw] min-w-[260px] max-w-[400px] rounded-[48px] bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))]" />
+                </div>
+              )}
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            style={{ y: overlayY, opacity: overlayOpacity }}
+            className="pointer-events-none flex flex-col items-start gap-6 self-end lg:self-center lg:items-end lg:text-right"
+          >
+            {stats.map((stat) => (
               <div key={stat.label}>
-                <div className="text-2xl font-bold text-white leading-none">
+                <div className="text-2xl lg:text-3xl font-bold text-white leading-none">
                   {stat.value}
                 </div>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-white/80 mt-1 font-semibold">
+                <div className="mt-1 text-[10px] uppercase tracking-[0.28em] text-white/70 font-semibold">
                   {stat.label}
                 </div>
               </div>
             ))}
-            <a href="#resume" className="text-xs text-[#c6ff00] underline underline-offset-4 mt-2 font-bold drop-shadow-md">
-              Go To Resume
+            <a href="#resume" className="pointer-events-auto text-xs text-[#c6ff00] underline underline-offset-4 font-bold">
+              Download CV
             </a>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+
+        <motion.div
+          style={{ y: overlayY, opacity: overlayOpacity }}
+          className="pointer-events-none flex max-w-sm justify-start pb-2 lg:pb-4"
+        >
+          <p className="text-white/60 text-xs leading-relaxed font-light max-w-xs">
+            Backend developer specializing in REST APIs, authentication systems, and modular workflows.
+          </p>
+        </motion.div>
+      </div>
 
     </section>
   );
