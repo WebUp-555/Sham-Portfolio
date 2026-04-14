@@ -1,23 +1,9 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
-function Card({ children, index, total, scaleFactor = 0.05, offset = 40 }) {
+function Card({ children, index, total, offset = 40 }) {
     const ref = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "start start"], // Adjust offset based on scroll behavior
-    });
-
-    // Scale down as it gets pushed up? Actually, standard stack is simpler with sticky.
-    // The 'React Bits' requested style often involves scaling the card *behind* as the current one comes up.
-    // Or scaling the *current* card as it sticks and the next one comes.
-    // Let's implement a simple sticky stack where cards stack on top of each other.
-
-    // To make it look "stacked", we can use `top` offset.
     const top = offset + index * 10;
-
-    // Optional: Scale effect as it scrolls out? 
-    // Let's keep it simple first: Sticky cards.
 
     return (
         <div
@@ -26,10 +12,7 @@ function Card({ children, index, total, scaleFactor = 0.05, offset = 40 }) {
             style={{
                 top: `${top}px`,
                 zIndex: index,
-                marginBottom: `${(total - index) * offset}px`, // Push subsequent content down
-                // Or just standard sticky behavior:
-                // If we want them to stack, we need a container with height.
-                // A common pattern is having them all in a container, and they stick.
+                marginBottom: `${(total - index) * offset}px`,
             }}
         >
             <motion.div

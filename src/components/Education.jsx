@@ -2,16 +2,22 @@ import { motion } from "framer-motion";
 
 const education = [
   {
-    school: "Indian Institute Of Technology",
-    degree: "Bachelor of Science, Data Science",
-    location: "Madras, India",
-    time: "Jan 2022 – Jan 2026",
+    school: "Sri Chaitanya Techno School",
+    degree: "School Education",
+    location: "Kurnool, Andhra Pradesh, India",
+    time: "2020",
   },
   {
-    school: "Sri Eshwar College Of Engineering",
-    degree: "B.Tech, AI and Data Science",
-    location: "Coimbatore, India",
-    time: "Nov 2022 – Nov 2026",
+    school: "Sri Chaitanya College",
+    degree: "Intermediate",
+    location: "Kurnool, Andhra Pradesh, India",
+    time: "2021 – 2022",
+  },
+  {
+    school: "G. Pulla Reddy Engineering College",
+    degree: "B.Tech, Electrical and Electronics Engineering",
+    location: "Kurnool, Andhra Pradesh, India",
+    time: "2023 – Present",
   },
 ];
 
@@ -25,7 +31,7 @@ export default function Education() {
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
         >
-          <p className="text-xs uppercase tracking-[0.3em] text-[#c6ff00]">
+          <p className="text-sm font-medium text-[#c6ff00]">
             Education
           </p>
           <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
@@ -52,7 +58,7 @@ export default function Education() {
                       <div className="glass timeline-card">
                         <h3 className="text-lg font-semibold">{item.school}</h3>
                         <p className="mt-2 text-sm text-white/70">{item.degree}</p>
-                        <p className="mt-3 text-xs uppercase tracking-[0.2em] text-white/40">
+                        <p className="mt-3 text-sm text-white/50">
                           {item.location}
                         </p>
                       </div>
@@ -69,7 +75,7 @@ export default function Education() {
                       <div className="glass timeline-card">
                         <h3 className="text-lg font-semibold">{item.school}</h3>
                         <p className="mt-2 text-sm text-white/70">{item.degree}</p>
-                        <p className="mt-3 text-xs uppercase tracking-[0.2em] text-white/40">
+                        <p className="mt-3 text-sm text-white/50">
                           {item.location}
                         </p>
                       </div>

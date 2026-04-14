@@ -1,108 +1,48 @@
 import { motion } from "framer-motion";
-import { Code2, Brain, Boxes, Server, Layout, Database, Cloud, Eye, Wrench, Cpu, CheckCircle } from "lucide-react";
+import { Code2, Server, Database, Cloud, Wrench, ShieldCheck, CheckCircle } from "lucide-react";
 
 const skillCategories = [
   {
     title: "Programming Languages",
     icon: Code2,
     color: "text-blue-400",
-    items: ["Python", "Java", "C", "C++", "SQL", "JavaScript", "R", "Dart"],
+    items: ["JavaScript", "SQL"],
   },
   {
-    title: "AI / Machine Learning",
-    icon: Brain,
-    color: "text-purple-400",
-    items: [
-      "Large Language Models (LLMs)",
-      "Retrieval-Augmented Generation (RAG)",
-      "Prompt Engineering",
-      "Model Fine-Tuning",
-      "Deep Learning",
-      "Computer Vision",
-      "OCR",
-      "Named Entity Recognition (NER)"
-    ],
-  },
-  {
-    title: "AI & ML Frameworks",
-    icon: Boxes,
-    color: "text-pink-400",
-    items: ["TensorFlow", "OpenAI API", "LangChain", "Unsloth", "Gemini", "Qwen", "Mistral", "Gemma"],
-  },
-  {
-    title: "Backend & APIs",
+    title: "Backend Development",
     icon: Server,
-    color: "text-green-400",
-    items: ["Flask", "FastAPI", "REST API Development", "WebSockets"],
-  },
-  {
-    title: "Frontend & App Development",
-    icon: Layout,
-    color: "text-cyan-400",
-    items: ["React.js", "React Native", "HTML", "CSS"],
-  },
-  {
-    title: "Databases & Storage",
-    icon: Database,
-    color: "text-orange-400",
-    items: ["MongoDB", "MySQL", "Firebase", "Supabase", "Vector Databases", "Pinecone"],
-  },
-  {
-    title: "Cloud & DevOps",
-    icon: Cloud,
-    color: "text-indigo-400",
-    items: [
-      "AWS (Lambda, EC2, DynamoDB, WebSocket)",
-      "Google Cloud Platform (GCP)",
-      "Azure Machine Learning",
-      "Docker"
-    ],
-  },
-  {
-    title: "Computer Vision & Media",
-    icon: Eye,
     color: "text-emerald-400",
-    items: ["OpenCV", "MediaPipe"],
+    items: ["Node.js", "Express.js", "REST API Design", "MVC Architecture"],
   },
   {
-    title: "Developer Tools",
+    title: "Authentication & Security",
+    icon: ShieldCheck,
+    color: "text-lime-400",
+    items: ["JWT Authentication", "RBAC", "Password Hashing", "Secure Routes"],
+  },
+  {
+    title: "Databases",
+    icon: Database,
+    color: "text-cyan-400",
+    items: ["MongoDB", "Schema Design", "Data Modeling"],
+  },
+  {
+    title: "Tools & Platforms",
     icon: Wrench,
     color: "text-amber-400",
-    items: [
-      "Git",
-      "GitHub",
-      "Postman",
-      "VS Code",
-      "PyCharm",
-      "IntelliJ IDEA",
-      "Eclipse",
-      "WinSCP",
-      "PuTTY"
-    ],
+    items: ["Git", "GitHub", "Postman"],
   },
   {
-    title: "System & Core CS",
-    icon: Cpu,
-    color: "text-red-400",
-    items: [
-      "Linux",
-      "Data Structures & Algorithms",
-      "Object-Oriented Programming (OOP)",
-      "Scalable Systems",
-      "Distributed Systems (Basics)",
-      "Performance Optimization"
-    ],
+    title: "Deployment & Delivery",
+    icon: Cloud,
+    color: "text-indigo-400",
+    items: ["Async/Await", "Error Handling", "Payment Integrations", "Production Workflows"],
   },
   {
-    title: "Development Practices",
+    title: "Engineering Practices",
     icon: CheckCircle,
     color: "text-lime-400",
-    items: [
-      "Unit Testing",
-      "Integration Testing",
-      "Code Reviews",
-      "Agile Sprint-Based Development"
-    ],
+    items: ["Modular Architecture", "Clean Error Handling", "Scalable APIs"],
   },
 ];
 
@@ -123,13 +63,13 @@ export default function Skills() {
           transition={{ duration: 0.4 }}
         >
           <p className="text-xs uppercase tracking-[0.3em] text-[#c6ff00]">
-            Technical Arsenal
+            Technical Stack
           </p>
           <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-            Tools & Technologies
+            Backend Skills
           </h2>
           <p className="mt-4 text-white/60 max-w-3xl text-base">
-            Experienced across the full AI product lifecycle — from model training and backend systems to cloud deployment and production tooling.
+            Focused on Node.js backend development, secure authentication, database design, and production-ready API workflows.
           </p>
         </motion.div>
 

@@ -1,281 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Mohamed Abubakkar S</title>
+    <title>Resume - D SHAMSHEER</title>
     <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            margin: 0;
+            padding: 32px;
+            background: #0b0b0d;
+            color: #f4f4f4;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.55;
+        }
+
+        .page {
+            max-width: 920px;
             margin: 0 auto;
-            padding: 40px;
-            background-color: #fff;
+            background: #141418;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 22px;
+            padding: 42px;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
         }
 
         .header {
             text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            padding-bottom: 22px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         h1 {
             margin: 0;
-            font-size: 2.5em;
-            color: #2c3e50;
+            font-size: 2.75rem;
+            letter-spacing: -0.03em;
         }
 
         .contact-info {
-            margin-top: 10px;
-            font-size: 0.9em;
+            margin-top: 12px;
+            font-size: 0.95rem;
+            color: rgba(244, 244, 244, 0.8);
         }
 
         .contact-info a {
-            color: #333;
+            color: inherit;
             text-decoration: none;
-            margin: 0 5px;
+            white-space: nowrap;
         }
 
         h2 {
-            color: #2c3e50;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 30px;
+            margin: 30px 0 16px;
+            font-size: 1.05rem;
+            letter-spacing: 0.18em;
             text-transform: uppercase;
-            font-size: 1.2em;
+            color: #c6ff00;
         }
 
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 26px;
         }
 
         .entry {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .entry-header {
             display: flex;
             justify-content: space-between;
-            font-weight: bold;
+            gap: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
         }
 
         .entry-subtitle {
+            color: rgba(244, 244, 244, 0.72);
             font-style: italic;
-            color: #555;
-            display: flex;
-            justify-content: space-between;
         }
 
         ul {
-            margin-top: 5px;
+            margin: 8px 0 0;
             padding-left: 20px;
         }
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
         .skills-category {
-            font-weight: bold;
+            color: #c6ff00;
+            font-weight: 700;
         }
 
-        @media (prefers-color-scheme: dark) {
+        a {
+            color: inherit;
+        }
+
+        @media (max-width: 768px) {
             body {
-                background-color: #1a1a1a;
-                color: #e0e0e0;
+                padding: 16px;
             }
 
-            h1,
-            h2,
-            .contact-info a {
-                color: #f0f0f0;
+            .page {
+                padding: 24px;
+                border-radius: 18px;
             }
 
-            .header {
-                border-bottom-color: #555;
+            h1 {
+                font-size: 2rem;
             }
 
-            h2 {
-                border-bottom-color: #444;
-            }
-
-            .entry-subtitle {
-                color: #aaa;
+            .entry-header,
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
 </head>
-
 <body>
-    <div class="header">
-        <h1>Mohamed Abubakkar S</h1>
-        <div class="contact-info">
-            <a href="mailto:mdabucse@gmail.com">mdabucse@gmail.com</a> | <a
-                href="https://mohamedabubakkar.com">mohamedabubakkar.com</a> | <a
-                href="https://linkedin.com/in/mdabucse">linkedin.com/in/mdabucse</a> | <a
-                href="https://github.com/mdabucse">github.com/mdabucse</a>
+    <main class="page">
+        <div class="header">
+            <h1>D SHAMSHEER</h1>
+            <div class="contact-info">
+                <a href="mailto:designcore.dev@gmail.com">designcore.dev@gmail.com</a> | <a href="https://linkedin.com/in/d-shamsheer-5237782b8">linkedin.com/in/d-shamsheer-5237782b8</a> | <a href="https://github.com/WebUp-555">github.com/WebUp-555</a> | Kurnool, Andhra Pradesh
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <h2>Education</h2>
-        <div class="entry">
-            <div class="entry-header">
-                <span>Indian Institute Of Technology Madras, India</span>
-                <span>Jan. 2022 – Jan 2026</span>
-            </div>
-            <div class="entry-subtitle">
-                Bachelor of Science, Data Science
-            </div>
+        <div class="section">
+            <h2>Summary</h2>
+            <p>Backend developer focused on Node.js, Express.js, REST APIs, JWT/RBAC, and MongoDB. I build modular, secure, and scalable server-side systems with clean error handling and practical deployment workflows.</p>
         </div>
-        <div class="entry">
-            <div class="entry-header">
-                <span>Sri Eshwar College Of Engineering Coimbatore, India</span>
-                <span>Nov. 2022 – Nov 2026</span>
-            </div>
-            <div class="entry-subtitle">
-                B.TECH, AI and Data Science
-            </div>
-        </div>
-    </div>
 
-    <div class="section">
-        <h2>Experience</h2>
-        <div class="entry">
-            <div class="entry-header">
-                <span>AI Engineer | ZUDU.AI (Onsite - Chennai)</span>
-                <span>Sep 2025 – Oct 2025</span>
+        <div class="section">
+            <h2>Education</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>B.Tech</span>
+                    <span>2022 - 2026</span>
+                </div>
+                <div class="entry-subtitle">Computer Science / Engineering</div>
             </div>
-            <ul>
-                <li>Fine-tuned a Tanglish-based LLM using Unsloth, leveraging GCP VMs for efficient model training.
-                    Conducted performance comparisons across multiple models, including Mistral, Gemma, and Qwen, to
-                    optimize accuracy and language understanding.</li>
-            </ul>
         </div>
-        <div class="entry">
-            <div class="entry-header">
-                <span>ML Engineer | Cellstrat (Remote)</span>
-                <span>May 2024 – Aug 2024</span>
-            </div>
-            <ul>
-                <li>An AI-powered chatbot using VectorDB, OpenAI, and AWS, leveraging RAG to improve knowledge
-                    retrieval. Implemented effective prompt engineering techniques to enhance LLM-generated outputs.
-                    Designed and optimized RESTful APIs to integrate AI models into real-world applications.</li>
-            </ul>
-        </div>
-        <div class="entry">
-            <div class="entry-header">
-                <span>150+ Hackathons Experience | 10X Hackathon Winner</span>
-                <span>Jan 2023 – Present</span>
-            </div>
-            <ul>
-                <li>Participated in 70+ hackathons, winning Rs 6,08,000 through innovation and teamwork, including top
-                    positions in two international and two national-level competitions.</li>
-            </ul>
-        </div>
-    </div>
 
-    <div class="section">
-        <h2>Projects</h2>
-        <div class="entry">
-            <div class="entry-header">
-                <span>Sketch Mentor</span>
-                <span>Mar 2025</span>
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>VideoTweet Backend API</span>
+                    <span>Node.js / MongoDB</span>
+                </div>
+                <ul>
+                    <li>Built 15+ REST APIs for authentication, content, and user workflows.</li>
+                    <li>Implemented JWT authentication with role-based access control.</li>
+                    <li>Designed modular MVC structure and scalable MongoDB schemas.</li>
+                </ul>
             </div>
-            <div class="entry-subtitle">Gemini, Pydantic, Qwen, FastAPI, Langchain, VectorDB, OpenCV, React, MongoDB
+            <div class="entry">
+                <div class="entry-header">
+                    <span>E-Commerce Web Application</span>
+                    <span>React / Express / Razorpay</span>
+                </div>
+                <ul>
+                    <li>Built secure user/admin flows, cart features, and payment handling.</li>
+                    <li>Integrated Razorpay and backend APIs for production-style workflows.</li>
+                </ul>
             </div>
-            <ul>
-                <li>An AI-driven tool to solve handwritten mathematical expressions using LLMs (Gemini, Qwen),
-                    integrating RAG for improved knowledge retrieval and optimized prompt engineering. Built a scalable
-                    backend with LangChain and FastAPI for efficient LLM interactions.</li>
-            </ul>
         </div>
-        <div class="entry">
-            <div class="entry-header">
-                <span>Pulse AI</span>
-                <span>Nov 2024</span>
-            </div>
-            <div class="entry-subtitle">Python, Flask, OpenCV, MediaPipe, ReactJs, MongoDB</div>
-            <ul>
-                <li>Developed non-invasive heart rate tracking, temperature monitoring, and sleep analytics for
-                    newborns, along with automated APGAR scoring, improving NICU data accuracy by 50%.</li>
-            </ul>
-        </div>
-        <div class="entry">
-            <div class="entry-header">
-                <span>Visionary Glucometer</span>
-                <span>Aug 2024</span>
-            </div>
-            <div class="entry-subtitle">OpenAI, Deep Learning, Tensorflow, MongoDB, OpenCV, React Native</div>
-            <ul>
-                <li>The Visionary Glucometer using CNN to estimate glucose levels from the iris and created a
-                    personalized food recommendation engine, improving dietary adherence by 40% over six months.</li>
-            </ul>
-        </div>
-        <div class="entry">
-            <div class="entry-header">
-                <span>InnovHunt</span>
-                <span>July 2024</span>
-            </div>
-            <div class="entry-subtitle">Gemini, Langchain, Pinecone, Subabase, Flask, Web3, ReactJs, MongoDB</div>
-            <ul>
-                <li>The Combination Of Web3 And AI. It Connects the Investors and Founders. It contains Secure
-                    Transactions and AI Recommendation System Based on The Genre of the Investor.</li>
-            </ul>
-        </div>
-        <div class="entry">
-            <div class="entry-header">
-                <span>Prescription Analyze And Medicine Suggestion Bot</span>
-                <span>Mar 2024</span>
-            </div>
-            <div class="entry-subtitle">Gemini, Langchain, OCR, NER, Streamlit</div>
-            <ul>
-                <li>It is an OCR model to scan doctor’s prescriptions and extract medicine names using NER. Integrated
-                    with a trained model, Provides descriptions and images of the medicines, functioning as a
-                    Prescription Analysis and Medicine Suggestion Bot.</li>
-            </ul>
-        </div>
-    </div>
 
-    <div class="section">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><span class="skills-category">Programming Languages:</span> Python, Java, C/C++, SQL, JavaScript,
-                HTML/CSS, R, Dart</li>
-            <li><span class="skills-category">Frameworks & Libraries:</span> React, Flask, FastAPI, LangChain</li>
-            <li><span class="skills-category">Core CS Concepts:</span> Linux, Data Structures & Algorithms,
-                Object-Oriented Programming (OOP), Scalable Systems, Distributed Systems (Basic), Performance
-                Optimization</li>
-            <li><span class="skills-category">Testing & Development Practices:</span> Unit Testing, Integration Testing,
-                Code Reviews, Agile Sprint-based Development</li>
-            <li><span class="skills-category">Databases:</span> MySQL, MongoDB, Firebase, Supabase</li>
-            <li><span class="skills-category">Developer Tools:</span> Putty, WinSCP, Postman, Git, GitHub, Docker,
-                Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse</li>
-            <li><span class="skills-category">Cloud Technologies:</span> AWS (Lambda, DynamoDB, EC2, WebSocket), Azure
-                (ML Toolkit)</li>
-        </ul>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script>
-        window.onload = function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has('download')) {
-                const element = document.body;
-                const opt = {
-                    margin: 0.5,
-                    filename: 'Mohamed_Abubakkar_Resume.pdf',
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2 },
-                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-                };
-                html2pdf().set(opt).from(element).save();
-            }
-        };
-    </script>
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><span class="skills-category">Programming:</span> JavaScript, SQL</li>
+                <li><span class="skills-category">Backend:</span> Node.js, Express.js, REST API Design, MVC Architecture</li>
+                <li><span class="skills-category">Security:</span> JWT, RBAC, Password Hashing, Secure Routes</li>
+                <li><span class="skills-category">Databases:</span> MongoDB, Schema Design, Data Modeling</li>
+                <li><span class="skills-category">Tools:</span> Git, GitHub, Postman</li>
+            </ul>
+        </div>
+    </main>
 </body>
-
 </html>

@@ -5,10 +5,8 @@ import { Menu, X } from "lucide-react";
 
 const menuItems = [
     { name: "Home", href: "#" },
-    { name: "Achievements", href: "#achievements" },
-    { name: "Experience", href: "#timelines" },
+    { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
-    { name: "Publications", href: "#articles" },
     { name: "Skills", href: "#skills" },
     { name: "Resume", href: "#resume" },
     { name: "Contact", href: "#contact" },
@@ -87,7 +85,7 @@ export default function Navigation() {
                             initial="closed"
                             animate="open"
                             exit="closed"
-                            className="fixed inset-0 z-[95] flex items-center justify-center"
+                            className="fixed inset-0 z-[95] flex items-center justify-center text-white"
                         >
                             <nav className="flex flex-col items-center gap-4">
                                 {menuItems.map((item, index) => (
@@ -96,7 +94,8 @@ export default function Navigation() {
                                         href={item.href}
                                         variants={itemVariants}
                                         onClick={handleLinkClick}
-                                        className="group relative text-4xl md:text-6xl lg:text-7xl font-bold text-white hover:text-[#c6ff00] transition-colors duration-200"
+                                        className="group relative text-4xl md:text-6xl lg:text-7xl font-bold text-[#ffffff] hover:text-[#c6ff00] transition-colors duration-200"
+                                        style={{ color: "#ffffff" }}
                                         custom={index}
                                     >
                                         {/* Hover Effect Line */}

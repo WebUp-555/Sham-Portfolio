@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useId } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 const CurvedText = ({
@@ -10,8 +10,8 @@ const CurvedText = ({
     reverse = false,
     className = ""
 }) => {
-    const [rotation, setRotation] = useState(0);
     const controls = useAnimation();
+    const reactId = useId();
 
     useEffect(() => {
         controls.start({
@@ -33,7 +33,7 @@ const CurvedText = ({
     const r = radius;
 
     // Path definition for a circle
-    const pathId = "curvedTextPath";
+    const pathId = `curvedTextPath-${reactId.replace(/:/g, "")}`;
     const pathD = `M ${cx}, ${cy} m -${r}, 0 a ${r},${r} 0 1,1 ${r * 2},0 a ${r},${r} 0 1,1 -${r * 2},0`;
 
     return (

@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local component files to ignore
+src/components/Achievements.jsx
+src/components/Articles.jsx
+src/components/Services.jsx
+src/components/Testimonials.jsx
+src/components/Timelines.jsx
+
+/package-lock.json

@@ -1,12 +1,8 @@
 const skills = [
-  "Python", "Java", "C", "C++", "SQL", "JavaScript", "HTML", "CSS", "R", "Dart",
-  "React", "Flask", "FastAPI", "LangChain", "Linux",
-  "Data Structures", "Algorithms", "OOP", "Scalable Systems", "Distributed Systems",
-  "MySQL", "MongoDB", "Firebase", "Supabase", "Git", "GitHub", "Docker", "Postman",
-  "GCP", "AWS Lambda", "AWS DynamoDB", "AWS EC2", "Azure ML", "OpenAI API",
-  "Vector Databases", "RAG", "Prompt Engineering", "LLMs", "Model Fine-tuning",
-  "Unsloth", "Mistral", "Gemma", "Qwen", "Computer Vision", "OpenCV", "MediaPipe",
-  "Deep Learning", "TensorFlow", "REST API", "Cloud Deployment"
+  "JavaScript", "Node.js", "Express.js", "MongoDB", "REST API", "MVC Architecture",
+  "JWT Authentication", "RBAC", "Password Hashing", "Postman", "Git", "GitHub",
+  "Razorpay", "Async/Await", "Error Handling", "Modular Backend Design", "Security",
+  "API Development", "Database Design", "Production Readiness"
 ];
 
 export default function SkillsTicker() {

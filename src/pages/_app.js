@@ -1,4 +1,4 @@
-import { Poppins, Anton } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "../styles/globals.css";
 import Navigation from "../components/Navigation";
 
@@ -8,15 +8,9 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-const anton = Anton({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-anton",
-});
-
 export default function App({ Component, pageProps }) {
   return (
-    <div className={`${poppins.variable} ${anton.variable} antialiased font-sans`}>
+    <div className={`${poppins.variable} antialiased font-sans`}>
       <Navigation />
       <Component {...pageProps} />
     </div>
