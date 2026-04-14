@@ -51,10 +51,10 @@ export default function Hero() {
             className="pointer-events-none max-w-sm self-start text-left"
           >
             <div className="text-[#c6ff00] text-xs font-semibold uppercase tracking-[0.3em] mb-2">
-              Upcoming Associate Engineer @ Presidio
+             Backend Developer | Node.js • MongoDB • REST APIs
             </div>
             <div className="text-white/70 text-sm font-light tracking-wide">
-              Kurnool, Andhra Pradesh, India
+              India | Open to Remote Opportunities
             </div>
           </motion.div>
 
